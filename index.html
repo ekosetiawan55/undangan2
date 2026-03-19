@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan - [Nama Pria] & [Nama Wanita]</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap');
+        
+        :root {
+            --gold: #d4af77;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .heading-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('https://picsum.photos/id/1015/2000/1200');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .section-bg {
+            background-color: #f5f0e8;
+        }
+
+        .countdown-box {
+            transition: all 0.3s ease;
+        }
+        
+        .countdown-box:hover {
+            transform: scale(1.05);
+        }
+
+        .floral {
+            position: absolute;
+            opacity: 0.1;
+            font-size: 8rem;
+            color: #d4af77;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-[#f8f4eb] text-[#3f2e1e]">
+
+    <!-- HERO -->
+    <section class="hero-bg h-screen flex items-center justify-center relative text-white">
+        <div class="absolute top-10 left-1/2 -translate-x-1/2 text-center">
+            <p class="text-sm tracking-[4px] font-medium">Dengan Rahmat Allah SWT</p>
+            <h1 class="heading-font text-6xl md:text-8xl mt-4 tracking-wider"> [Nama Pria] </h1>
+            <div class="flex justify-center items-center gap-6 my-6">
+                <div class="h-px w-20 bg-white"></div>
+                <i class="fa-solid fa-heart text-4xl text-[#d4af77]"></i>
+                <div class="h-px w-20 bg-white"></div>
+            </div>
+            <h1 class="heading-font text-6xl md:text-8xl tracking-wider"> [Nama Wanita] </h1>
+        </div>
+
+        <div class="absolute bottom-16 left-1/2 -translate-x-1/2 text-center">
+            <p class="text-xl md:text-2xl font-light">Minggu, 15 Juni 2026</p>
+            <button onclick="document.getElementById('details').scrollIntoView({ behavior: 'smooth' })" 
+                    class="mt-8 px-8 py-3 border border-white hover:bg-white hover:text-[#3f2e1e] transition-all text-sm tracking-widest">
+                LIHAT UNDANGAN
+            </button>
+        </div>
+
+        <!-- Decorative floral -->
+        <span class="floral top-10 left-10">🌸</span>
+        <span class="floral bottom-20 right-10 rotate-12">🌺</span>
+    </section>
+
+    <!-- NAV -->
+    <nav class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md z-50 shadow-sm">
+        <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
+            <h2 class="heading-font text-2xl text-[#d4af77]">The Wedding</h2>
+            <div class="flex gap-6 text-sm">
+                <a href="#details" class="hover:text-[#d4af77] transition">Details</a>
+                <a href="#lokasi" class="hover:text-[#d4af77] transition">Lokasi</a>
+                <a href="#galeri" class="hover:text-[#d4af77] transition">Galeri</a>
+                <a href="#rsvp" class="hover:text-[#d4af77] transition">RSVP</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- DETAILS -->
+    <section id="details" class="section-bg py-20">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="heading-font text-5xl">Akad Nikah & Resepsi</h2>
+                <p class="mt-4 text-lg text-gray-600">Kami berbahagia mengundang Anda</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-10">
+                <!-- Akad -->
+                <div class="bg-white rounded-3xl shadow-lg p-8 text-center">
+                    <div class="text-[#d4af77] mb-4">
+                        <i class="fa-solid fa-ring text-5xl"></i>
+                    </div>
+                    <h3 class="heading-font text-3xl mb-2">Akad Nikah</h3>
+                    <p class="text-2xl font-light">Minggu, 15 Juni 2026</p>
+                    <p class="text-xl mt-1">Pukul 08.00 WIB</p>
+                    <p class="mt-6 text-gray-500">Rumah Mempelai Pria</p>
+                    <p class="text-sm mt-2">Jl. Contoh No. 123, Kota XYZ</p>
+                </div>
+
+                <!-- Resepsi -->
+                <div class="bg-white rounded-3xl shadow-lg p-8 text-center">
+                    <div class="text-[#d4af77] mb-4">
+                        <i class="fa-solid fa-champagne-glasses text-5xl"></i>
+                    </div>
+                    <h3 class="heading-font text-3xl mb-2">Resepsi Pernikahan</h3>
+                    <p class="text-2xl font-light">Minggu, 15 Juni 2026</p>
+                    <p class="text-xl mt-1">Pukul 10.00 - 14.00 WIB</p>
+                    <p class="mt-6 text-gray-500">Grand Ballroom Hotel XYZ</p>
+                    <p class="text-sm mt-2">Jl. Contoh No. 456, Kota XYZ</p>
+                </div>
+            </div>
+
+            <!-- Countdown -->
+            <div class="mt-16 text-center">
+                <p class="text-sm uppercase tracking-widest mb-4">Hari Bahagia kami tinggal</p>
+                <div id="countdown" class="grid grid-cols-4 gap-4 max-w-md mx-auto">
+                    <!-- JS akan isi -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOKASI -->
+    <section id="lokasi" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="heading-font text-5xl text-center mb-12">Lokasi Acara</h2>
+            
+            <!-- GANTI LINK MAPS DI BAWAH INI -->
+            <div class="aspect-video rounded-3xl overflow-hidden shadow-2xl">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.123456789!2d106.123456!3d-6.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM6AwM!5e0!3m2!1sid!2sid!4v1234567890" 
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+
+            <div class="mt-8 text-center text-sm">
+                <p class="font-medium">Grand Ballroom Hotel XYZ</p>
+                <p class="text-gray-500">Jl. Contoh No. 456 • Kota XYZ</p>
+                <a href="https://maps.google.com/?q=Grand+Ballroom+Hotel+XYZ" 
+                   target="_blank" 
+                   class="inline-flex items-center gap-2 mt-4 text-[#d4af77] hover:underline">
+                    <i class="fa-solid fa-location-dot"></i> BUKA GOOGLE MAPS
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERI -->
+    <section id="galeri" class="section-bg py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="heading-font text-5xl text-center mb-12">Galeri Cinta Kami</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <!-- GANTI SRC DENGAN FOTO KAMU (upload ke root repo) -->
+                <img src="https://picsum.photos/id/1011/600/800" class="rounded-2xl shadow-md hover:scale-105 transition">
+                <img src="https://picsum.photos/id/201/600/800" class="rounded-2xl shadow-md hover:scale-105 transition">
+                <img src="https://picsum.photos/id/301/600/800" class="rounded-2xl shadow-md hover:scale-105 transition">
+                <img src="https://picsum.photos/id/401/600/800" class="rounded-2xl shadow-md hover:scale-105 transition">
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP -->
+    <section id="rsvp" class="py-20 bg-white">
+        <div class="max-w-md mx-auto px-6 text-center">
+            <h2 class="heading-font text-5xl mb-6">Konfirmasi Kehadiran</h2>
+            <p class="text-gray-600 mb-8">Kehadiran dan doa Anda sangat berarti bagi kami.</p>
+            
+            <button onclick="kirimRSVP()" 
+                    class="w-full bg-[#3f2e1e] text-white py-6 rounded-3xl text-xl font-medium hover:bg-[#d4af77] hover:text-[#3f2e1e] transition-all flex items-center justify-center gap-3">
+                <i class="fa-brands fa-whatsapp text-3xl"></i>
+                KONFIRMASI VIA WHATSAPP
+            </button>
+            
+            <p class="mt-6 text-xs text-gray-400">* Akan membuka WhatsApp otomatis</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#3f2e1e] text-white py-12 text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <p class="heading-font text-3xl mb-2">Terima Kasih</p>
+            <p class="text-sm opacity-70">Atas doa dan kehadiran Anda kami ucapkan terima kasih yang sebesar-besarnya.<br>Doakan kami selalu bahagia dan penuh berkah.</p>
+            
+            <div class="flex justify-center gap-6 mt-10 text-2xl">
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-ring"></i>
+            </div>
+            
+            <p class="mt-12 text-xs opacity-50">Made with ❤️ for [Nama Pria] & [Nama Wanita]</p>
+        </div>
+    </footer>
+
+    <script>
+        // === TAILWIND INIT ===
+        tailwind.config = {
+            content: [],
+            theme: {
+                extend: {}
+            }
+        }
+
+        // === COUNTDOWN ===
+        function startCountdown() {
+            // GANTI TANGGAL INI SESUAI TANGGAL PERNIKAHANMU (format: YYYY-MM-DDTHH:mm:ss)
+            const weddingDate = new Date("2026-06-15T08:00:00").getTime();
+
+            const countdownEl = document.getElementById('countdown');
+            
+            setInterval(() => {
+                const now = new Date().getTime();
+                const distance = weddingDate - now;
+
+                if (distance < 0) {
+                    countdownEl.innerHTML = `<div class="col-span-4 text-2xl font-light">Hari ini hari bahagia kita! 🎉</div>`;
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                countdownEl.innerHTML = `
+                    <div class="countdown-box bg-white text-[#3f2e1e] rounded-2xl p-4">
+                        <div class="text-4xl font-light">${days}</div>
+                        <div class="text-xs tracking-widest mt-1">HARI</div>
+                    </div>
+                    <div class="countdown-box bg-white text-[#3f2e1e] rounded-2xl p-4">
+                        <div class="text-4xl font-light">${hours}</div>
+                        <div class="text-xs tracking-widest mt-1">JAM</div>
+                    </div>
+                    <div class="countdown-box bg-white text-[#3f2e1e] rounded-2xl p-4">
+                        <div class="text-4xl font-light">${minutes}</div>
+                        <div class="text-xs tracking-widest mt-1">MENIT</div>
+                    </div>
+                    <div class="countdown-box bg-white text-[#3f2e1e] rounded-2xl p-4">
+                        <div class="text-4xl font-light">${seconds}</div>
+                        <div class="text-xs tracking-widest mt-1">DETIK</div>
+                    </div>
+                `;
+            }, 1000);
+        }
+
+        // === RSVP WHATSAPP ===
+        function kirimRSVP() {
+            // GANTI NOMOR WHATSAPP INI (format: 6281234567890)
+            const nomorWA = "6281234567890";
+            const pesan = encodeURIComponent("Assalamualaikum, saya hadir untuk akad & resepsi [Nama Pria] & [Nama Wanita] pada 15 Juni 2026. Terima kasih!");
+            
+            window.open(`https://wa.me/${nomorWA}?text=${pesan}`, '_blank');
+        }
+
+        // === INIT ===
+        window.onload = function() {
+            startCountdown();
+            
+            // Optional: smooth scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        };
+    </script>
+</body>
+</html>
